@@ -129,10 +129,10 @@ You are encouraged to make "less" part of your standard command line toolkit.
 Did you remember to save "m1-introduction-to-tools-exercise.txt"?
 
 $ git status
-<type or copy-paste the result here>
+modified:   ../introduction-to-tools-exercises.txt
 
 $ git add .
-<type or copy-paste the result here>
+No results
 
 $ git commit -m "Good stopping point"
 <type or copy-paste the result here>
@@ -148,8 +148,8 @@ BitBucket when a feature, fix, or in this case, assignment is finished.
 ----
 
 $ cd src/main/java/com/techelevator
-$ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
+$ pwd
+/Users/jameskole/workspace/exercises/m1-w1d1-intro-to-tools-exercises/java-helloworld/src/main/java/com/techelevator
 
 
 ----
@@ -157,7 +157,7 @@ $ <enter command to display present working directory>
     path?
 ----
 
-<type your answer here>
+Relative
 
 
 ----
@@ -166,8 +166,7 @@ $ <enter command to display present working directory>
 ----
 
 $ <enter command to list all files and folders including dot-files and dot-folders>
-<type or copy-paste the result here>
-
+Helloworld.java, ".", ".."
 
 ----
 13. "Helloworld.java" is the sole source code file of the Helloworld application.
@@ -180,8 +179,8 @@ $ cp Helloworld.java Helloworld.java.backup
 The "cp" parameters are the name of the source file followed by the name of the 
 destination file. 
 
-$ <enter command to list all files and folders in order to confirm the creation of the backup file>
-<type or copy-paste the result here>
+$ TecheleorsAir72:techelevator jameskole$ cp Helloworld.java Helloworld.java.backup
+
 
 
 ----    
@@ -194,8 +193,8 @@ $ mv Helloworld.java.backup Helloworld.java.copy
 The "mv" parameters are the existing name of the file followed by the new name 
 of the file. 
 
-$ <enter command to list all files and folders in order to confirm the renaming of the file>
-<type or copy-paste the result here>
+$ Helloworld.java.backup	Helloworld.java.copy
+
 
 
 ----
