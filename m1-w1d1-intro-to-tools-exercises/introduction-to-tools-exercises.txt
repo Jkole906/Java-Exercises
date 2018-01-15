@@ -291,6 +291,5 @@ Don't forget to save the file in Visual Studio Code!
 $ git status
 
 $ git add .
-$ <enter the Git command to save all "staged" changes>
-
-$ <enter the Git command to save local repository to BitBucket>
+$ git commit -m "Final Commit"
+$ git push origin master
