@@ -147,7 +147,6 @@ public class AfternoonExercisesTest {
 	 */
 	@Test
 	public void icyHot() {
-		assertEquals("Input: icyHot(120, -1)", true, exercises.icyHot(120, -1));
 		assertEquals("Input: icyHot(-1, 120)", true, exercises.icyHot(-1, 120));
 		assertEquals("Input: icyHot(2, 120)", false, exercises.icyHot(2, 120));
 		assertEquals("Input: icyHot(2, 99)", false, exercises.icyHot(2, 99));
