@@ -22,8 +22,32 @@ public class Exercises {
 	 array2List( {"Left", "Right", "Forward", "Back"} )  ->  ["Left", "Right", "Forward", "Back"] 
 	 */
 	public List<String> array2List(String[] stringArray) {
-		return null;
+		
+		List<String>copyOfStringArray = new ArrayList <String>(); 
+		
+		for(String currentListItem : stringArray) {
+			 copyOfStringArray.add (currentListItem);
+		
+		}
+			return copyOfStringArray;		
 	}
+	/*
+ ********NOTES*********
+	List<String>/* Note 1 * copyOfStringArray /* Note 2* =/* Note 3* new ArrayList <String>();/* Note 4 */ 
+	/* so now we need to tell the list we just made "Take each of the elements in the array (called 'stringArray' here) 
+	and add each one to the list we named 'copyOfStringArray'. 'for' loops are the best way to do that.
+	for(String currentListItem : stringArray) {
+		 copyOfStringArray.add (currentListItem);
+		
+	}
+		return copyOfStringArray;	
+}
+	// Note 1 - This is the command to say'We are going to make a new list of strings'.
+	// Note 2 -  this is the NAME of that LIST
+	// Note 3 - "=" here means 'MAKE the list(like making a basket)'
+	// Note 4 - this is the full command to actually create the list itself
+	*/
+	
 	
 	/*
 	 Given a list of Strings, return an array containing the same Strings in the same order 
@@ -32,7 +56,11 @@ public class Exercises {
 	 list2Array( ["Left", "Right", "Forward", "Back"] )  ->  {"Left", "Right", "Forward", "Back"}
 	 */
 	public String[] list2Array(List<String> stringList) {
-		return null;
+		String[] stringListCopy = new String[stringList.size()];
+		for(int currentIndexPosition = 0; currentIndexPosition < stringList.size(); currentIndexPosition++) {
+			stringListCopy[currentIndexPosition] = stringList.get(currentIndexPosition);
+		}
+				return stringListCopy;
 	}
 	
 	/*
@@ -43,7 +71,15 @@ public class Exercises {
 	 no4LetterWords( {"Jack", "Jill", "Jane", "John", "Jim"} )  ->  ["Jim"]
 	 */
 	public List<String> no4LetterWords(String[] stringArray) {
-		return null;
+		List<String>copyOfStringArray = new ArrayList <String>(); 
+		
+		for(String currentListWord : stringArray) {
+			 if(currentListWord.length() != 4) {
+				 copyOfStringArray.add (currentListWord);
+			 }
+		
+		}
+			return copyOfStringArray;		
 	}
 
 
@@ -66,7 +102,13 @@ public class Exercises {
 	 arrayInt2ListDouble( {84, 99, 3285, 13, 877} ) -> [42, 49.5, 1642.5, 6.5, 438.5]
 	 */
 	public List<Double> arrayInt2ListDouble(int[] intArray) {
-		return null;
+		List<Double>copyOfintArray = new ArrayList <Double>(); 
+		
+		for(double currentListItem : intArray) {
+			 copyOfintArray.add (currentListItem / 2.0);
+		
+		}
+			return copyOfintArray;
 	}
 	
 	/*
@@ -85,10 +127,21 @@ public class Exercises {
 	 oddOnly( {1143, 555, 7, 1772, 9953, 643} ) -> [1143, 555, 7, 9953, 643]
 	 oddOnly( {734, 233, 782, 811, 3, 9999} ) -> [233, 811, 3, 9999]  
 	 */
-	public List<Integer> oddOnly(Integer[] integerArray) {
-		return null;
+	public List<Integer> oddOnly(Integer[] integerArray)
+	{
+		List<Integer> copyOfintArray = new ArrayList<Integer>();
+
+		for (int currentListItem : integerArray)
+		{
+			if (currentListItem % 2 != 0)
+			{
+				copyOfintArray.add(currentListItem);
+
+			}
+		}
+		return copyOfintArray;
 	}
-	
+
 	/* 
 	 Given a List of Integers, and an int value, return true if the int value appears two or more times in 
 	 the list.

@@ -9,7 +9,7 @@ public class Exercises {
 	 helloName("X") → "Hello X!"
 	 */
 	public String helloName(String name) {
-		return null;
+		return ("Hello " + name + '!');
 	}
 
 	/*
@@ -20,7 +20,7 @@ public class Exercises {
 	 makeAbba("What", "Up") → "WhatUpUpWhat"
 	 */
 	public String makeAbba(String a, String b) {
-		return null;
+		return (a + b + b + a);
 	}
 
 	/*
@@ -32,7 +32,7 @@ public class Exercises {
 	 makeTags("cite", "Yay") → "<cite>Yay</cite>"
 	 */
 	public String makeTags(String tag, String word) {
-		return null;
+		return ("<" + tag + ">" + word + "<" + "/" + tag + ">");
 	}
 
 	/*
@@ -44,7 +44,7 @@ public class Exercises {
 	 makeOutWord("[[]]", "word") → "[[word]]"
 	 */
 	public String makeOutWord(String out, String word) {
-		return null;
+		return out.substring(0|1) + word + out.substring(2|3);
 	}
 
 	/*
@@ -55,7 +55,9 @@ public class Exercises {
 	 extraEnd("Hi") → "HiHiHi"
 	 */
 	public String extraEnd(String str) {
-		return null;
+		int lengthOfString = str.length();
+		String stringOne = str.substring(lengthOfString-2, lengthOfString);
+		return (stringOne + stringOne + stringOne);
 	}
 
 	/*
@@ -67,7 +69,9 @@ public class Exercises {
 	 firstTwo("ab") → "ab"
 	 */
 	public String firstTwo(String str) {
-		return null;
+		if(str.length() >= 3)
+			return str.substring(0, 2);
+		return str;
 	}
 
 	/*
@@ -77,7 +81,9 @@ public class Exercises {
 	 firstHalf("abcdef") → "abc"
 	 */
 	public String firstHalf(String str) {
-		return null;
+			return str.substring(0, str.length() / 2);
+
+	
 	}
 
 	/*
@@ -88,7 +94,7 @@ public class Exercises {
 	 withoutEnd("coding") → "odin"
 	 */
 	public String withoutEnd(String str) {
-		return null;
+		return str.substring(1, str.length()-1);
 	}
 	
 	/*
@@ -100,8 +106,13 @@ public class Exercises {
 	 comboString("aaa", "b") → "baaab"
 	 */
 	public String comboString(String a, String b) {
-		return null;
+		if(a.length() < b.length()) {
+		return (a + b + a);
+	}else {
+			return( b + a + b);
+		}
 	}
+	
 	
 	/*
 	 Given 2 strings, return their concatenation, except omit the first char of each. The strings will 
@@ -315,9 +326,16 @@ public class Exercises {
 	 altPairs("CodingHorror") → "Congrr"
 	 */
 	public String altPairs(String str) {
-		return null;
-	}
-
+		String outcome = "";
+		  for (int i = 0; i < str.length(); i += 4) {
+		  int end = i + 2;
+		    if (end > str.length()) {
+		      end = str.length();
+		    }
+		    outcome = outcome + str.substring (i, end);
+		  }
+		  return outcome;
+		}
 	/*
 	 Suppose the string "yak" is unlucky. Given a string, return a version where all the "yak" are removed, but 
 	 the "a" can be any char. The "yak" strings will not overlap.
