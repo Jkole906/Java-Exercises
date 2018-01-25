@@ -64,7 +64,7 @@ public class AfternoonExercises {
 	 sum3([7, 0, 0]) → 7
 	 */
 	public int sum3(int[] nums) {
-		return nums[0] + nums[1] + nums[2];
+		for( int currentArrayNumber = 0)
 	}
 
 	/*
