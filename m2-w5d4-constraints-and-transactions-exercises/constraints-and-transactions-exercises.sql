@@ -3,10 +3,28 @@
 
 -- 1. Add actors, Hampton Avenue, and Lisa Byway to the actor table.
 
+BEGIN TRANSACTION
+
+INSERT INTO actor (first_name, last_name) VALUES ('Hampton', 'Avenue');
+INSERT INTO actor (first_name, last_name) VALUES ('Lisa', 'Byway');
+
+
+ROLLBACK
+
+
 -- 2. Add "Euclidean PI", "The epic story of Euclid as a pizza delivery boy in 
 -- ancient Greece", to the film table. The movie was released in 2008 in English. 
 -- Since its an epic, the run length is 3hrs and 18mins. There are no special 
 -- features, the film speaks for itself, and doesn't need any gimmicks.	
+
+BEGIN TRANSACTION
+
+INSERT INTO film ((film_id, title, description, release_year, language_id, original_language_id, rental_duration, rental_rate, length, replacement_cost, rating) VALUES (film_id, title, description, release_year, language_id, original_language_id, rental_duration, rental_rate, length, replacement_cost, rating)
+INSERT INTO actor (first_name, last_name) VALUES ('Lisa', 'Byway');
+
+
+ROLLBACK
+
 
 -- 3. Hampton Avenue plays Euclid, while Lisa Byway plays his slightly 
 -- overprotective mother, in the film, "Euclidean PI". Add them to the film.
@@ -29,6 +47,9 @@
 
 -- 9. Delete Mathmagical from the category table. 
 -- (Did it succeed? Why?)
+
+BEGIN TRANSACTION
+
 
 -- 10. Delete all links to Mathmagical in the film_category tale. 
 -- (Did it succeed? Why?)
