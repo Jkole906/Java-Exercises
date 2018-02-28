@@ -13,7 +13,22 @@
 	<body>
 		<h1>Exercise 3 - Echo</h1>
 		
+		
+		
+		
 		<ul>
+		<c:set var="fontSize" value ="${param.count}"/>
+		<c:forEach begin="1" end="${param.count}">
+				<li style="font-size:${fontSize}px" >
+				<c:out value="${param.word}"/>
+				</li>
+				<c:set var="fontSize" value="${fontSize -1}" />
+		</c:forEach>
+		
+		
+		
+		<%--"${param.count}" allows input to be accepted by user--%>
+		 
 		<%--
 			Given two query string parameters, "word" and "count":
 			
