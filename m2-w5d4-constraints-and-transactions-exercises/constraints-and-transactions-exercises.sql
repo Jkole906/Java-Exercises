@@ -19,15 +19,31 @@ ROLLBACK
 
 BEGIN TRANSACTION
 
-INSERT INTO film ((film_id, title, description, release_year, language_id, original_language_id, rental_duration, rental_rate, length, replacement_cost, rating) VALUES (film_id, title, description, release_year, language_id, original_language_id, rental_duration, rental_rate, length, replacement_cost, rating)
+INSERT INTO film (title, description, release_year, language_id, original_language_id) VALUES ('Euclidean PI', 'The epic story of Euclid as a pizza delivery boy in 
+-- ancient Greece', 2008, 1, null)
 INSERT INTO actor (first_name, last_name) VALUES ('Lisa', 'Byway');
+
+
+
+SELECT * FROM film WHERE title = 'Euclidean PI'
+
+SELECT * FROM actor WHERE last_name = 'Byway'
+
 
 
 ROLLBACK
 
 
+COMMIT
+
+
 -- 3. Hampton Avenue plays Euclid, while Lisa Byway plays his slightly 
 -- overprotective mother, in the film, "Euclidean PI". Add them to the film.
+
+BEGIN TRANSACTION
+
+
+
 
 -- 4. Add Mathmagical to the category table.
 
