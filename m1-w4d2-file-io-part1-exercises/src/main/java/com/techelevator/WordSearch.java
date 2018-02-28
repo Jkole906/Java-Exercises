@@ -8,15 +8,23 @@ public class WordSearch {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		
+		int lineCount = 0;
 		
 		File inputFile = getInputFileFromUser();
 		Scanner userInput = new Scanner(System.in);
 		System.out.print("Enter word to search for.");
-		String word = userInput.nextLine();
-	try(Scanner fileScanner = new Scanner(inputFile)) {
-		while(fileScanner.hasNextLine()) {
-		}
-			System.out.println(wordCount); 
+		String searchedWord = userInput.nextLine();
+		try(Scanner fileScanner = new Scanner(inputFile)) {
+			while(fileScanner.hasNextLine()) {
+				String line = fileScanner.nextLine();
+				lineCount++;
+				if(line.contains(searchedWord)) {
+					System.out.println(lineCount+") " + line);
+				}
+			}
+				
+			
+			//System.out.println(); 
 		}
 }
 		
