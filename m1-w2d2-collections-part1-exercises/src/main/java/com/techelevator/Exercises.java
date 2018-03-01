@@ -1,13 +1,7 @@
 package com.techelevator;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
-import java.util.Set;
-import java.util.Stack;
 
 public class Exercises {
 
@@ -150,8 +144,17 @@ public class Exercises {
 	 foundIntTwice( [9, 23, 44, 2, 88, 44], 44) -> true
 	 */
 	public boolean foundIntTwice(List<Integer> integerList, int intToFind) {
-		return false;
+		 int count = 0;
+
+		    for (int currentNumber : integerList) {
+		        if (currentNumber == intToFind) count++;
+		    }
+
+		    return count > 1;
 	}
+			 
+		
+		
 	
 	/*
 	 Given an array of Integers, return a List that contains the same Integers (as Strings). Except any multiple of 3
@@ -167,7 +170,8 @@ public class Exercises {
 	 */
 	public List<String> fizzBuzzList(Integer[] integerArray) {
 		return null;
-	}
+
+}
 
 	/*
 	 Given a list of Strings, return a list that contains the distinct values. In other words, no value is to be
@@ -176,7 +180,7 @@ public class Exercises {
 	 distinctValues( ["jingle", "bells", "jingle", "bells", "jingle", "all", "the", "way"] ) -> ["jingle", "bells", "all", "the", "way"]
 	 */
 	public List<String> distinctValues(List<String> stringList) {
-		return null;
+
 	}
 
 	/*

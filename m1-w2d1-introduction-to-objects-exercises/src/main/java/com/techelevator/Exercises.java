@@ -44,7 +44,7 @@ public class Exercises {
 	 makeOutWord("[[]]", "word") → "[[word]]"
 	 */
 	public String makeOutWord(String out, String word) {
-		return out.substring(0|1) + word + out.substring(2|3);
+		return out.substring(0,2) + word + out.substring(2,4);
 	}
 
 	/*
@@ -122,7 +122,7 @@ public class Exercises {
 	 nonStart("shotl", "java") → "hotlava"
 	 */
 	public String nonStart(String a, String b) {
-		return null;
+		return (a.substring(1) + b.substring(1));
 	}
 
 	/*
@@ -133,8 +133,8 @@ public class Exercises {
 	 left2("Hi") → "Hi"
 	 */
 	public String left2(String str) {
-		return null;
-	}
+		int i = 2 % str.length();
+		  return str.substring(i) + str.substring(0, i);	}
 
 	/*
 	 Given a string, return a "rotated right 2" version where the last 2 chars are moved to the start. 
@@ -144,8 +144,13 @@ public class Exercises {
 	 right2("Hi") → "Hi"
 	 */
 	public String right2(String str) {
-		return null;
-	}
+		String lastTwo = str.substring(str.length()-2, str.length());
+		String withoutFirstTwo = str.substring(3,str.length());
+		
+		return withoutFirstTwo + lastTwo;
+		
+
+		}
 
 	/*
 	 Given a string, return a string length 1 from its front, unless front is false, in which case 
