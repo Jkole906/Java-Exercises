@@ -1,0 +1,48 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title><c:out value="${pageTitle}" /></title>
+    <c:url value="/css/site.css" var="cssUrl" />
+    <link rel="stylesheet" href="${cssUrl}" />
+</head>
+<body>
+    <header>
+        <h1>MVC Exercises - Views Part 2: Models - <c:out value="${pageTitle}" /></h1>        
+    </header>
+    <nav>
+        <ul>
+        <!-- the lack of a ".css" (Or any other extension) at the end of "productList" tells the program that its a controller, it doesn't need the entire file path) -->
+        <c:url var="listUrl" value="/productList"/>
+        <!-- Now make a "href" that links to the VALUE INSIDE(so it will need the $) the var you just made -->
+            <li><a href="${listUrl}">Product List</a></li>
+            <!--  Repeat for the rest -->
+            <c:url var="tablesUrl" value="/productTable"/>
+            <li><a href="${tablesUrl}">Product Table</a></li>
+            
+            <c:url var="tilesUrl" value="/productTiles"/>
+             <li><a href="${tilesUrl}">Product Tiles</a></li>
+            
+           <!--  pass in product id
+            make productdetail.jsp
+            use jsp to display product detail
+            
+            pair
+            header and footer
+            make recipies details
+             -->
+             
+             
+            <c:url var="detailUrl" value="/productDetail"> <!--  NOTE, its NOT CLOSED -->
+            		<c:param name="productId" value="SKU-3333" /> <!--  NOW its closed -->
+       
+       </c:url>
+            
+            
+        </ul>
+        
+    </nav>
+    <section id="main-content">
