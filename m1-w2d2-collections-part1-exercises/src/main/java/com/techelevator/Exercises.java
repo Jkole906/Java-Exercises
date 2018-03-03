@@ -223,7 +223,7 @@ public class Exercises
 	 */
 	public List<String> distinctValues(List<String> stringList)
 	{
-		List<String> values = new ArrayList<>(new HashSet<>(stringList));
+		return null;
 	}
 	
 

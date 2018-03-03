@@ -4,18 +4,17 @@ public class Car implements Vehicle{
 	
 
 
-	private double toll;
 	private double distance;
-	private boolean trailer;
+	private boolean hasTrailer;
 	
 	
 	
 	public double calculateToll(double distance) {
-		distance = distance*0.020;
-		if(setTrailer(true)) {
+		double toll = distance*0.020;
+		if(hasTrailer) {
 			toll = toll + 1.00;
 		}
-		return distance;
+		return toll;
 	}
 	
 	
@@ -24,16 +23,24 @@ public class Car implements Vehicle{
 		return distance;
 	}
 
-	public boolean isTrailer()
-	{
-		return trailer;
+	public boolean hasTrailer() {
+		return hasTrailer;
 	}
 
 
-	public boolean setTrailer(boolean trailer)
+	public Car(boolean hasTrailer) {
+		this.hasTrailer = hasTrailer;
+	}
+
+
+	@Override
+	public String getVehicleType()
 	{
-		this.trailer = trailer;
-		return trailer;
+		if(hasTrailer) {
+			return "Car+T";
+		}
+	
+		return "Car";
 	}
 
 }
