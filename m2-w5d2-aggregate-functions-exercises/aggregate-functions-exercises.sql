@@ -105,7 +105,7 @@ SELECT MAX((population / surfacearea)) AS population_density FROM country;
 -- highest life expectancies in descending order. 
 -- (highest life expectancies in world: 83.5, 166.6666, "Andorra")
 
-SELECT CAST((population / surfacearea) AS DECIMAL (10,4)) AS population_density, lifeexpectancy FROM country WHERE lifeexpectancy IS NOT NULL ORDER BY lifeexpectancy DESC LIMIT 10;  
+SELECT ((population / surfacearea)) AS population_density, lifeexpectancy FROM country WHERE lifeexpectancy IS NOT NULL ORDER BY lifeexpectancy DESC LIMIT 10;  
 
 
 -- 16. The difference between the previous and current GNP of all the countries in 
@@ -125,7 +125,7 @@ Select CAST(AVG(population)AS DECIMAL (10,0)),countrycode FROM city GROUP BY cou
 -- 18. The count of cities in each state in the USA, ordered by state name.
 -- (45 rows)
 
-SELECT (COUNT(name)) as number_of_Cities FROM city WHERE countrycode = 'USA' GROUP BY district ORDER BY number_of_Cities;	
+SELECT (COUNT(name)) as number_of_Cities FROM city WHERE countrycode = 'USA' GROUP BY district ORDER BY district;	
 	
 	
 -- 19. The count of countries on each continent, ordered from highest to lowest.
