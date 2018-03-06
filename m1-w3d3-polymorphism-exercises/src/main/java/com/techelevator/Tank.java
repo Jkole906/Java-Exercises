@@ -22,5 +22,5 @@ public class Tank implements Vehicle
 	{
 		return "Tank";
 	}
-
+		//Can have more methods but NEED at leas tthese two
 }

@@ -8,6 +8,11 @@ public class Car implements Vehicle{
 	private boolean hasTrailer;
 	
 	
+
+	public Car(boolean hasTrailer) {
+		this.hasTrailer = hasTrailer;
+	}
+	
 	
 	public double calculateToll(double distance) {
 		double toll = distance*0.020;
@@ -27,10 +32,6 @@ public class Car implements Vehicle{
 		return hasTrailer;
 	}
 
-
-	public Car(boolean hasTrailer) {
-		this.hasTrailer = hasTrailer;
-	}
 
 
 	@Override

@@ -20,12 +20,6 @@ private int axleCount;
 	}
 	
 	
-	
-	
-	
-	
-	
-	
 	//Imported methods 
 	@Override
 	public double calculateToll(double distance)
