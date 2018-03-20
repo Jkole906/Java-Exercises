@@ -87,7 +87,7 @@ public class Exercises
 	//This IS a "fancy one-line of code" way to do it, 
 	//BUT! Not putting the logic(String half = str.length()/2) in a variable("half" here) means its a BIT harder to call to 
 	//that variable, which, in this case is fine, because its only in this one method, 
-	//but changing the method later would take more typing
+	//but changing the method/adding mor complex steps later would might be a bit more work
 
 	}
 
