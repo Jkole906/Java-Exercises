@@ -108,11 +108,73 @@ function hasTeen(num1, num2, num3) {
         return false;
     }
     
+    // 7. **AlarmClock** Write a function that given a day of the week encoded as 
+    //      0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a boolean indicating if we are on vacation, 
+    //      displays the weekday name, and the time in the form of "7:00" indicating when the alarm clock should ring. 
+    //      Weekdays, the alarm should be "7:00" and on the weekend it should be "10:00". Unless we are on vacation -- 
+    //      then on weekdays it should be "10:00" and weekends it should be "off".
+
+	// 	alarmClock(1, false) → "Monday 7:00"
+	// 	alarmClock(5, true) → "Friday 10:00"
+    // 	alarmClock(0, false) → "Sunday 10:00"
+    
+    function alarmClock(a, isVacation){
+        //days = [0, 1, 2, 3, 4, 5, 6];
+            if (a === 0){
+                a = "Sunday ";
+            } 
+            else if (a === 1){
+                a = "Monday ";
+            } 
+            else if (a === 2){
+                a = "Tuesday ";
+            } 
+            else if (a === 3){
+                a = "Wednesday ";
+            } 
+            else if (a === 4){
+                a = "Thursday ";
+            } 
+            else if (a === 5){
+                a = "Friday ";
+            } else
+             a = "Saturday ";
+
+        if(a === "Saturday " || a === "Sunday "){
+            if(isVacation){
+                return a+"off";
+            }else{
+                return a+"10:00";
+            }
+        } else{
+            if(isVacation){
+                return a+"10:00";
+            }else{
+                return a+"7:00";
+            }
+        }    
+    }
 
 
+    // 8. **MakeMiddle** Write a function that given an array of ints of even length, returns a new 
+    //      array length 2 containing the middle two elements from the original array. If the original array 
+    //      length is not even, or at least 2 elements in length, return an empty array.
 
-
-
+    // makeMiddle([1, 2, 3, 4]) → [2, 3]
+    // makeMiddle([7, 1, 2, 3, 4, 9]) → [2, 3]
+    // makeMiddle([1, 2]) → [1, 2]
+    
+        function makeMiddle(nums){
+            result = [];
+            if(nums.length < 2 || nums.length%2 === 1){
+                return result;
+            }else{
+                mid = nums.length/2;
+                result.push(nums[mid-1]);
+                result.push(nums[mid]);
+                return result;
+            }
+        }
 
 
 
